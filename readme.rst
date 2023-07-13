@@ -7,14 +7,37 @@ The response is calculated using the semi-analytic solution set presented in Des
 Installation
 ====
 
-If python is installed on your system, Sphereob can be installed with pip + git by opening command prompt in administrator and using::
+If you have python added to path and are familiar with pip, Sphere-ob may be installed with pip + git by opening a comand prompt as administrator and using::
 
 	pip install git+https://github.com/anonseg2023/sphereob
 
-Alternatively, the repository can be manually downloaded and installed using the install script, i.e., by navigating to the SPHERE-OB folder, opening a python / anaconda prompt in administrator and running::
+Alternatively, the repository can be manually downloaded and installed using the install script, i.e., by navigating to the ShereOverburdenProject folder, opening a python / anaconda prompt in administrator and running::
+
 
 	python setup.py install
 
+
+Once these steps have been completed the program can be launched from the command line using::
+
+
+	sphereob
+
+For anaconda users or users who do not have python added to path, you may want to install sphere-ob into a separate Anaconda environment, this can be done easily by running the install_or_update.bat.
+
+You can then switch to the newly installed environment using::
+
+	conda activate sphereob
+
+Or, if using git-bash::
+
+	source activate sphereob
+
+Note: By default, new terminals start in the 'base' environment, so you will have to enter the above command each time you open a new terminal. Alternatively, you may add the command to your ~/.bashrc file to have it run automatically. See the the `Anaconda Environemnent documentation <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_ for more details.
+
+Once the environment has been activated the user may then navigate to the project directory in an anaconda prompt then launch the program using::
+
+
+	python sphereob.py
 
 Dependencies
 ====
@@ -25,16 +48,6 @@ Dependencies
 * pyqt5
 * pandas
 
-Installing SPHERE-OB through pip + git will result in these libraries being installed in your current python environment.
-
-Getting Started
-====
-
-Once installed, the GUI can be launched from the command line as::
-
-	sphereob
-
-The program will launch and the user can now begin plotting airborne EM responses for varying survey configurations and geologic models.
 
 Documentation
 ====
